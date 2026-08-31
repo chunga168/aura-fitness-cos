@@ -1,14 +1,20 @@
 # Sprint Kanban Board
 
-## Sprint 0: Multi-Agent Workspace Initialization
+## Sprint 1: Foundation, Dynamic Theme Engine & 5-Screen Shell
 
 ```mermaid
 kanban
   Todo
-    [TASK-004: Fitness Aura Requirements & Tech Stack Intake]
+    [FEAT-002: PowerSync Offline SQLite Engine]
+    [FEAT-003: Supabase Auth & Cloud Shield Upgrade]
+    [FEAT-004: Interactive Workout Logger & Exercise Set Tracker]
+    [FEAT-005: History Heatmap Calendar & Monthly PRs]
+    [FEAT-006: Social Feed & Squad Challenges]
   Done
-    [TASK-001: Chief of Staff Multi-Agent Roles Setup]
-    [TASK-002: Custom Skills & Rules Setup]
-    [TASK-003: Enterprise Git Repo Init & Branch Setup]
-    [TASK-005: Observability Agent & Telemetry Setup]
+    [TASK-101: ADR-002 Offline-First Architecture & Theme Design]
+    [TASK-102: Centralized Theme Tokens & Glassmorphism Engine]
+    [TASK-103: 5-Tab Floating Glass Navigation Shell]
+    [TASK-104: Home Screen with Aura Rings & Habits]
+    [TASK-105: Activities, History, Social & Profile Screens]
+    [TASK-106: Unit & Widget Test Suite Verification (100% Pass)]
 ```
