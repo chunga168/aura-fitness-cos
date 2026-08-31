@@ -12,12 +12,14 @@ graph TD
     CoS --> LeadDev[Lead Developer]
     CoS --> QA[QA & Testing Agent]
     CoS --> Safety[Safety & Security Agent]
+    CoS --> Obs[Observability Agent]
     CoS --> DevOps[DevOps & Git Orchestrator]
 
     Arch -->|ADRs & Specs| LeadDev
     Safety -->|Threat Audit| LeadDev
     LeadDev -->|Code Implementation| QA
-    QA -->|Verification Gate| DevOps
+    QA -->|Quality Verification| Obs
+    Obs -->|Telemetry & Log Check| DevOps
     DevOps -->|Git Release| CoS
 ```
 
@@ -27,7 +29,8 @@ graph TD
 3. **Lead Developer** ([.agents/roles/lead_developer.md](file:///d:/Projects/ChungaFitness%20-%20w%20Chief%20of%20Staff/.agents/roles/lead_developer.md)): Clean code implementation adhering to DRY/SOLID principles.
 4. **QA & Testing Agent** ([.agents/roles/qa_agent.md](file:///d:/Projects/ChungaFitness%20-%20w%20Chief%20of%20Staff/.agents/roles/qa_agent.md)): Comprehensive test suite generation, edge-case validation, and empirical pass verification.
 5. **Safety & Security Agent** ([.agents/roles/safety_security_agent.md](file:///d:/Projects/ChungaFitness%20-%20w%20Chief%20of%20Staff/.agents/roles/safety_security_agent.md)): Vulnerability scanning, secret isolation, input sanitization, and OWASP compliance.
-6. **DevOps & Git Orchestrator** ([.agents/roles/devops_git_agent.md](file:///d:/Projects/ChungaFitness%20-%20w%20Chief%20of%20Staff/.agents/roles/devops_git_agent.md)): Git Flow branching strategy, Conventional Commit conventions (`feat:`, `fix:`, `sec:`), and release management.
+6. **Observability Agent** ([.agents/roles/observability_agent.md](file:///d:/Projects/ChungaFitness%20-%20w%20Chief%20of%20Staff/.agents/roles/observability_agent.md)): Structured logging, severity filtering (`DEBUG` hidden by default, switch flag), log rotation (< 50MB), and BI metrics.
+7. **DevOps & Git Orchestrator** ([.agents/roles/devops_git_agent.md](file:///d:/Projects/ChungaFitness%20-%20w%20Chief%20of%20Staff/.agents/roles/devops_git_agent.md)): Git Flow branching strategy, Conventional Commit conventions (`feat:`, `fix:`, `sec:`), and release management.
 
 ---
 

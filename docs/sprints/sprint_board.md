@@ -10,4 +10,5 @@ kanban
     [TASK-001: Chief of Staff Multi-Agent Roles Setup]
     [TASK-002: Custom Skills & Rules Setup]
     [TASK-003: Enterprise Git Repo Init & Branch Setup]
+    [TASK-005: Observability Agent & Telemetry Setup]
 ```

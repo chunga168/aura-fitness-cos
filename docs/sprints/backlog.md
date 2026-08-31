@@ -11,6 +11,7 @@ Managed by: **Chief of Staff**
 | `TASK-001` | Infrastructure | Establish `.agents/` Governance & Role Definitions | Chief of Staff | Completed | Passed |
 | `TASK-002` | Infrastructure | Define Skills (`orchestrator-cos`, `qa-gatekeeper`, `git-workflow`, etc.) | Chief of Staff | Completed | Passed |
 | `TASK-003` | Infrastructure | Initialize Enterprise Git repository, `.gitignore`, and initial commit | DevOps Agent | Completed | Passed |
+| `TASK-005` | Infrastructure | Add Observability Agent role, logging rules, and telemetry skill | Chief of Staff | Completed | Passed |
 | `TASK-004` | Application | Intake Fitness Aura app requirements & select target tech stack | Architect | Backlog | Pending Intake |
 
 ---
