@@ -15,6 +15,7 @@ Every task in this workspace is governed by specialized roles coordinated by the
 | **Lead Developer** | Senior Software Engineer | Clean code implementation, SOLID/DRY principles, modular refactoring, component design | Code Review & Maintainability Gate |
 | **QA & Testing Agent** | Quality Assurance Engineer | Unit/integration/E2E test suite design, edge-case generation, test execution, bug tracking | QA & Test Coverage Gate (Target: >85%) |
 | **Safety & Security Agent** | Security & Compliance Auditor | OWASP Top 10 auditing, secret detection, input sanitization, threat modeling, dependency scanning | Security & Privacy Compliance Gate |
+| **Observability Agent** | Telemetry & BI Engineer | Structured logging, severity filtering, debug toggle flags, log rotation (< 50MB), BI metrics | Observability & Telemetry Gate |
 | **DevOps & Git Orchestrator** | Release & Infrastructure Engineer | Git Flow branching strategy, Conventional Commits, release tagging, changelog generation, CI/CD | Version Control & Deployment Gate |
 
 ---
@@ -30,7 +31,8 @@ flowchart TD
     C --> D[Safety Agent: Security & Threat Assessment]
     D --> E[Lead Developer: Code Implementation]
     E --> F[QA Agent: Test Creation & Verification]
-    F --> G{All Quality & Safety Gates Passed?}
+    F --> Obs[Observability Agent: Telemetry, Logs & Rotation Check]
+    Obs --> G{All Quality, Safety & Observability Gates Passed?}
     G -- No --> E
     G -- Yes --> H[DevOps Agent: Git Commit & Branch Management]
     H --> I[Chief of Staff: Sprint & Release Report to User]
@@ -42,8 +44,9 @@ flowchart TD
 3. **Security Assessment**: The Safety Agent reviews proposed inputs, authentication flows, data storage, and external packages.
 4. **Development**: The Lead Developer executes changes adhering to clean code guidelines in [.agents/rules/code_quality.md](file:///d:/Projects/ChungaFitness%20-%20w%20Chief%20of%20Staff/.agents/rules/code_quality.md).
 5. **QA & Testing**: The QA Agent writes tests, executes automated verification, and checks edge cases.
-6. **Git Versioning**: The DevOps Agent stages atomic commits following Conventional Commits (`feat:`, `fix:`, `sec:`, `test:`, `docs:`, `refactor:`) on topic branches.
-7. **Release Synthesis**: Chief of Staff reports status, test results, and next actions to the user.
+6. **Observability Review**: The Observability Agent verifies structured log levels (`DEBUG` hidden by default, switch flag), log rotation (< 50 MB total limit), and BI event tracking.
+7. **Git Versioning**: The DevOps Agent stages atomic commits following Conventional Commits (`feat:`, `fix:`, `sec:`, `test:`, `docs:`, `refactor:`) on topic branches.
+8. **Release Synthesis**: Chief of Staff reports status, test results, and next actions to the user.
 
 ---
 
